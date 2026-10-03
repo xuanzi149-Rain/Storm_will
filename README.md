@@ -1,226 +1,47 @@
-# 🔍 LangChain RAG Starter
+# 校园网络服务智能助手
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?logo=fastapi)
-![LangChain](https://img.shields.io/badge/LangChain-0.2.16-1C3C3C?logo=langchain)
-![ChromaDB](https://img.shields.io/badge/ChromaDB-0.5.3-orange)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.35-FF4B4B?logo=streamlit)
-![Gemini](https://img.shields.io/badge/Google%20Gemini-AI-4285F4?logo=google)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+面向北京邮电大学校园网、统一身份认证与 VPN 问题的参赛演示系统。用户描述症状后，系统会追问缺失信息、检索资料、给出有来源的建议，并生成可复制的报修摘要。**本项目不是学校官方服务，也不会创建真实工单。**
 
-A clean, production-ready **Retrieval-Augmented Generation (RAG)** pipeline starter template built with LangChain, ChromaDB, FastAPI, and Streamlit — powered by Google Gemini AI.
+## 功能与架构
 
-Upload your documents, ask questions, and get AI-generated answers grounded in your own data.
+`Streamlit 页面 → FastAPI /api/v1/query → 分诊 → Chroma 检索 → Gemini 依据资料回答`。无足够官方资料时，系统提示联系正式服务渠道；非官方资料不会单独驱动故障处理建议。问答资料包括三份根据北邮信息化技术中心公开网页整理的简要摘录，以及一份明确标为未核验的学生手册。资料来源、页码和原始链接会在页面展示。来源列表见 [设计文档](docs/competition-design.md)。
 
----
+## 本地运行
 
-## ✨ Features
-
-| Feature             | Details                                    |
-| ------------------- | ------------------------------------------ |
-| 🤖 LLM              | Google Gemini 2.5 Flash Lite               |
-| 🗄️ Vector Store     | ChromaDB (persistent local storage)        |
-| 📄 Document Support | PDF and TXT files                          |
-| ⚡ API              | FastAPI REST API with auto Swagger docs    |
-| 🖥️ UI               | Streamlit interactive demo interface       |
-| 🔐 Config           | Environment-based configuration via `.env` |
-| 🧩 Modular          | Clean service-based architecture           |
-
----
-
-## 🏗️ Architecture
-
-```
-User Query
-    │
-    ▼
-Streamlit UI ──► FastAPI /api/v1/query
-                        │
-                        ▼
-                  LangChain RAG Chain
-                  ┌─────────────────┐
-                  │  Retriever      │◄── ChromaDB Vector Store
-                  │  Gemini LLM     │◄── Google AI
-                  │  Prompt Template│
-                  └─────────────────┘
-                        │
-                        ▼
-                  Answer + Sources
-```
-
----
-
-## 📁 Project Structure
-
-```
-langchain-rag-starter/
-├── app/
-│   ├── api/
-│   │   └── routes.py          # FastAPI endpoints
-│   ├── core/
-│   │   ├── config.py          # Settings via .env
-│   │   └── prompts.py         # Prompt templates
-│   └── services/
-│       ├── embedder.py        # Gemini embedding logic
-│       ├── vectorstore.py     # ChromaDB setup
-│       └── rag_chain.py       # LangChain RAG chain
-├── streamlit_ui/
-│   └── app.py                 # Streamlit demo UI
-├── data/
-│   └── sample_docs/           # Drop your PDFs/TXTs here
-├── tests/
-│   └── test_rag.py
-├── main.py                    # FastAPI entry point
-├── ingest.py                  # Document ingestion script
-├── requirements.txt
-├── .env.example
-├── .gitignore
-└── README.md
-```
-
----
-
-## 🚀 Quick Start
-
-### 1. Clone the repository
+建议 Python 3.11。
 
 ```bash
-git clone https://github.com/pubudini-rathnayake/langchain-rag-starter.git
-cd langchain-rag-starter
-```
-
-### 2. Create and activate a virtual environment
-
-```bash
-py -3.11 -m venv venv
-
-# Windows
-venv\Scripts\Activate.ps1
-
-# Mac/Linux
+python3.11 -m venv venv
 source venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### 4. Set up environment variables
-
-```bash
 cp .env.example .env
-```
-
-Open `.env` and add your Gemini API key:
-
-```
-GEMINI_API_KEY=your_actual_key_here
-```
-
-Get your free key at: **https://aistudio.google.com/apikey**
-
-### 5. Add your documents
-
-Drop any `.pdf` or `.txt` files into the `data/sample_docs/` folder.
-
-### 6. Ingest documents into ChromaDB
-
-```bash
+# 编辑 .env，填写 GEMINI_API_KEY
 python ingest.py
-```
-
-### 7. Start the FastAPI server
-
-```bash
 uvicorn main:app --reload
 ```
 
-Visit **http://localhost:8000/docs** for the interactive API explorer.
-
-### 8. Start the Streamlit UI (new terminal)
+另开终端运行：
 
 ```bash
 streamlit run streamlit_ui/app.py
 ```
 
-Visit **http://localhost:8501**
+页面默认在 `http://localhost:8501`，API 文档在 `http://localhost:8000/docs`。验证：`python -m unittest discover -s tests -v`。
 
----
+## API
 
-## 🔌 API Usage
-
-### Query endpoint
-
-```http
-POST /api/v1/query
-Content-Type: application/json
-
-{
-  "question": "What is this document about?"
-}
-```
-
-### Response
+`POST /api/v1/query`，请求示例：
 
 ```json
-{
-  "answer": "The document is about...",
-  "sources": ["data/sample_docs/my_file.pdf"]
-}
+{"question":"校外无法访问校内网站，VPN 怎么使用？","attempts":"已尝试重新登录"}
 ```
 
----
+响应包含 `status`（`need_detail`、`answered`、`unsupported` 或 `error`）、`category`、`answer`、带文件名/页码/原始链接的 `sources`，以及 `repair_summary`。
 
-## ⚙️ Configuration
+## 资料更新
 
-All settings are managed via the `.env` file:
+把获准公开展示的 PDF/TXT 放入 `data/sample_docs/`，在 `data/sources.json` 为文件记录 `authority`、`school` 和 `url`。只有确认为学校官方发布的资料才标记 `official`；未登记文件默认未核验。运行 `python ingest.py` 重建索引。现有学生手册自述非官方，文件在当前工作区中未纳入 Git，发布前需确认是否有展示权并决定是否包含。
 
-| Variable          | Default          | Description                       |
-| ----------------- | ---------------- | --------------------------------- |
-| `GEMINI_API_KEY`  | —                | Your Google Gemini API key        |
-| `CHROMA_DB_PATH`  | `./chroma_db`    | Where ChromaDB stores vectors     |
-| `COLLECTION_NAME` | `rag_collection` | ChromaDB collection name          |
-| `CHUNK_SIZE`      | `500`            | Document chunk size in characters |
-| `CHUNK_OVERLAP`   | `50`             | Overlap between chunks            |
+## 公网部署
 
----
-
-## 🗺️ Roadmap
-
-- [ ] JWT authentication for the API
-- [ ] Multi-collection support
-- [ ] File upload endpoint (no manual ingestion needed)
-- [ ] Docker support
-- [ ] Deploy to cloud (Railway / Render)
-
----
-
-## 🛠️ Built With
-
-- [LangChain](https://www.langchain.com/) — LLM orchestration framework
-- [Google Gemini](https://aistudio.google.com/) — Large language model
-- [ChromaDB](https://www.trychroma.com/) — Vector database
-- [FastAPI](https://fastapi.tiangolo.com/) — REST API framework
-- [Streamlit](https://streamlit.io/) — Demo UI framework
-
----
-
-## 👩‍💻 Author
-
-**Pubudini Rathnayake**
-
-- GitHub: [@pubudini-rathnayake](https://github.com/pubudini-rathnayake)
-- LinkedIn: [linkedin.com/in/pubudini-rathnayake](https://linkedin.com/in/pubudini-rathnayake)
-
----
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
-
----
-
-⭐ If you found this useful, please consider giving it a star!
+项目提供 `Dockerfile` 和 `start.sh`，供支持 Docker 的托管平台使用。部署时将仓库根目录设为构建上下文，配置私密环境变量 `GEMINI_API_KEY`，平台将 `PORT` 注入容器；容器启动会重建知识库索引，同时启动本地 API 与对外 Streamlit 页面。首次启动需要能访问 Gemini API。托管平台还需提供稳定公网 URL。完成部署后，务必用另一台设备访问 URL 并跑通三类演示案例。仓库目前没有绑定任何托管账号，因此这里不提供未经验证的公网地址。

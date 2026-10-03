@@ -1,25 +1,36 @@
+from typing import Optional
+
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from app.services.rag_chain import build_rag_chain
+from pydantic import BaseModel, Field
+
+from app.services.support import answer
 
 router = APIRouter()
 
+
 class QueryRequest(BaseModel):
-    question: str
+    question: str = Field(min_length=1, max_length=2000)
+    attempts: str = Field(default="", max_length=2000)
+
+
+class Source(BaseModel):
+    title: str
+    page: Optional[int] = None
+    authority: str
+    url: str = ""
+
 
 class QueryResponse(BaseModel):
+    status: str
+    category: str
     answer: str
-    sources: list[str]
+    sources: list[Source]
+    repair_summary: str
+
 
 @router.post("/query", response_model=QueryResponse)
-async def query(request: QueryRequest):
+def query(request: QueryRequest):
     try:
-        chain = build_rag_chain()
-        result = chain.invoke({"query": request.question})
-        sources = [
-            doc.metadata.get("source", "unknown")
-            for doc in result.get("source_documents", [])
-        ]
-        return QueryResponse(answer=result["result"], sources=list(set(sources)))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        return QueryResponse(**answer(request.question, request.attempts))
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc

@@ -1,49 +1,57 @@
-"""
-ingest.py — Run this script to load documents into ChromaDB.
-Usage: python ingest.py
-Drop your PDFs or .txt files into data/sample_docs/ first.
-"""
+"""Index PDF/TXT files from data/sample_docs with explicit source provenance."""
 
-import os
+import json
+from pathlib import Path
+
 from dotenv import load_dotenv
-from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from app.services.vectorstore import get_vectorstore
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
+
 from app.core.config import settings
+from app.services.vectorstore import get_vectorstore
 
 load_dotenv()
+DOCS_PATH = Path("data/sample_docs")
+MANIFEST_PATH = Path("data/sources.json")
 
-DOCS_PATH = "./data/sample_docs"
 
 def load_documents():
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8")) if MANIFEST_PATH.exists() else {}
     docs = []
-    for filename in os.listdir(DOCS_PATH):
-        filepath = os.path.join(DOCS_PATH, filename)
-        if filename.endswith(".pdf"):
-            loader = PyPDFLoader(filepath)
-        elif filename.endswith(".txt"):
-            loader = TextLoader(filepath, encoding="utf-8")
+    for path in sorted(DOCS_PATH.iterdir()):
+        if path.suffix.lower() == ".pdf":
+            loader = PyPDFLoader(str(path))
+        elif path.suffix.lower() == ".txt":
+            loader = TextLoader(str(path), encoding="utf-8")
         else:
             continue
-        docs.extend(loader.load())
+        info = manifest.get(path.name, {})
+        authority = info.get("authority", "unverified")
+        if authority not in ("official", "unverified"):
+            raise ValueError(f"Invalid authority for {path.name}: {authority}")
+        for doc in loader.load():
+            doc.metadata["authority"] = authority
+            doc.metadata["school"] = info.get("school", "")
+            doc.metadata["url"] = info.get("url", "")
+            docs.append(doc)
     return docs
 
-def ingest():
-    print("Loading documents...")
-    docs = load_documents()
-    print(f"  Found {len(docs)} page(s)")
 
-    splitter = RecursiveCharacterTextSplitter(
+def ingest():
+    docs = load_documents()
+    if not docs:
+        raise RuntimeError(f"No PDF/TXT documents found in {DOCS_PATH}")
+    chunks = RecursiveCharacterTextSplitter(
         chunk_size=settings.chunk_size,
         chunk_overlap=settings.chunk_overlap,
-    )
-    chunks = splitter.split_documents(docs)
-    print(f"  Split into {len(chunks)} chunks")
+    ).split_documents(docs)
+    store = get_vectorstore()
+    # Rebuild the demo collection so repeated ingestion never leaves stale chunks.
+    store.delete_collection()
+    store = get_vectorstore()
+    store.add_documents(chunks)
+    print(f"Indexed {len(docs)} pages, {len(chunks)} chunks from {len(set(d.metadata['source'] for d in docs))} files")
 
-    print("Storing in ChromaDB...")
-    vectorstore = get_vectorstore()
-    vectorstore.add_documents(chunks)
-    print("Done! Documents ingested successfully.")
 
 if __name__ == "__main__":
     ingest()
