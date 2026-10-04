@@ -14,6 +14,11 @@ logger = logging.getLogger(__name__)
 # Some model builds emit a bare image/file marker as its own content part.
 MENTION_ONLY = re.compile(r"(?i)^(图片|图像|附件|视频|文件|image|photo|attachment|video|file)\s*[:：]?\s*$")
 
+SOURCE_KINDS = {
+    "official": "官方资料",
+    "team": "非官方资料（团队整理）",
+}
+
 
 def _first_text(value) -> str:
     """Return the first non-empty string inside a string, list or mapping."""
@@ -110,12 +115,19 @@ def retrieve(question: str, school: str):
 
 def generate_answer(question: str, documents: list) -> str:
     context = "\n\n".join(
-        f"[{index}] 学校：{doc.metadata.get('school', '')}\n{doc.page_content}"
+        f"[{index}] 学校：{doc.metadata.get('school', '')}"
+        f"　来源类型：{SOURCE_KINDS.get(doc.metadata.get('authority'), '未核验资料')}"
+        f"\n{doc.page_content}"
         for index, doc in enumerate(documents, 1)
     )
     messages = [
         ("system", "你是校园网络问题服务辅助助手。只能依据提供的资料回答，用中文给出简短、可执行的步骤。"
          "资料没有支持的事实、网址、联系方式和处理流程一律不要编造。"
+         "资料分为「官方资料」和「非官方资料（团队整理）」，两者冲突时以官方资料为准。"
+         "「非官方资料」可以用于说明有哪些系统、入口及其用途；但具体的故障排查步骤、"
+         "联系电话、办理地点，只有在官方资料支持时才能作为操作指引给出。"
+         "如果给出的指引主要依据非官方资料，回答中必须说明这些内容并非学校官方发布，请通过学校官方渠道核实。"
+         "资料中标注为第三方资源或非学校官方的内容，不得作为学校推荐介绍给用户。"
          "不要建议用户忽略浏览器证书警告或关闭安全防护；遇到此类旧指南，应提示通过学校官方渠道核实当前流程。"
          "不要索取或复述密码、动态口令等敏感信息；如资料包含它们，也不要输出。"
          "若资料不足，请明确说明并建议联系学校正式服务渠道。"),
