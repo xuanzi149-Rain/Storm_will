@@ -3,7 +3,9 @@
 import re
 from pathlib import Path
 
+from app.core.config import settings
 from app.services.rag_chain import generate_answer, retrieve
+from app.services.schools import beijing_schools
 
 CATEGORY_WORDS = {
     "VPN": ("vpn", "校外访问", "远程访问", "atrust"),
@@ -54,7 +56,7 @@ def source_info(doc) -> dict:
     }
 
 
-def answer(question: str, attempts: str = "") -> dict:
+def answer(question: str, attempts: str = "", school: str = "") -> dict:
     question = question.strip()
     if not question:
         raise ValueError("请描述遇到的问题")
@@ -64,6 +66,10 @@ def answer(question: str, attempts: str = "") -> dict:
         "sources": [],
         "repair_summary": repair_summary(question, attempts, category),
     }
+    if not school:
+        return {**base, "status": "need_school", "answer": "请先选择所在学校，以便只检索该校的官方资料。"}
+    if school not in beijing_schools():
+        raise ValueError("请选择北京市普通高等学校名单中的学校")
     if needs_detail(question, category):
         return {**base, "status": "need_detail", "answer": "请补充具体症状：使用的设备、所处位置、出现的错误提示，以及已经尝试过的操作。"}
     if category == "其他":
@@ -71,12 +77,16 @@ def answer(question: str, attempts: str = "") -> dict:
 
     safe_question = redact(question)
     try:
-        matches = retrieve(safe_question)
+        matches = retrieve(safe_question, school)
     except Exception:
         return {**base, "status": "error", "answer": "资料检索暂时不可用。请稍后重试，或联系学校正式服务渠道。"}
-    documents = [doc for doc, score in matches if score >= 0.45]
+    threshold = 0.08 if settings.embedding_provider == "local" else 0.45
+    documents = [
+        doc for doc, score in matches
+        if score >= threshold and doc.metadata.get("school") == school
+    ]
     if not documents:
-        return {**base, "status": "unsupported", "answer": "现有资料没有足够依据回答这个问题。建议联系学校正式服务渠道，并附上报修摘要。"}
+        return {**base, "status": "unsupported", "answer": f"当前没有足够的{school}官方资料回答这个问题。建议联系该校正式服务渠道，并附上报修摘要。"}
 
     official_documents = [doc for doc in documents if doc.metadata.get("authority") == "official"]
     if not official_documents:

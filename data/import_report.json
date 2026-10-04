@@ -1,0 +1,466 @@
+{
+  "imported": [
+    {
+      "file": "中国人民公安大学__remote_access.txt",
+      "school": "中国人民公安大学",
+      "chars": 230
+    },
+    {
+      "file": "中国人民大学__vpn_guide.txt",
+      "school": "中国人民大学",
+      "chars": 664
+    },
+    {
+      "file": "中国人民大学__wired_network.txt",
+      "school": "中国人民大学",
+      "chars": 343
+    },
+    {
+      "file": "中国传媒大学__it_services_2025.txt",
+      "school": "中国传媒大学",
+      "chars": 1793
+    },
+    {
+      "file": "中国传媒大学__network_access.txt",
+      "school": "中国传媒大学",
+      "chars": 657
+    },
+    {
+      "file": "中国传媒大学__network_faq.txt",
+      "school": "中国传媒大学",
+      "chars": 635
+    },
+    {
+      "file": "中国传媒大学__new_student_guide.txt",
+      "school": "中国传媒大学",
+      "chars": 4754
+    },
+    {
+      "file": "中国农业大学__remote_access.txt",
+      "school": "中国农业大学",
+      "chars": 867
+    },
+    {
+      "file": "中国劳动关系学院__network_notice.txt",
+      "school": "中国劳动关系学院",
+      "chars": 557
+    },
+    {
+      "file": "中国劳动关系学院__vpn_guide.txt",
+      "school": "中国劳动关系学院",
+      "chars": 1010
+    },
+    {
+      "file": "中国地质大学（北京）__vpn_access.txt",
+      "school": "中国地质大学（北京）",
+      "chars": 1749
+    },
+    {
+      "file": "中国石油大学（北京）__network_manual.txt",
+      "school": "中国石油大学（北京）",
+      "chars": 1700
+    },
+    {
+      "file": "中国石油大学（北京）__vpn_faq.txt",
+      "school": "中国石油大学（北京）",
+      "chars": 424
+    },
+    {
+      "file": "中国矿业大学（北京）__account_faq.txt",
+      "school": "中国矿业大学（北京）",
+      "chars": 850
+    },
+    {
+      "file": "中国矿业大学（北京）__network_faq.txt",
+      "school": "中国矿业大学（北京）",
+      "chars": 1561
+    },
+    {
+      "file": "中国矿业大学（北京）__network_guide.txt",
+      "school": "中国矿业大学（北京）",
+      "chars": 988
+    },
+    {
+      "file": "中国矿业大学（北京）__network_guide_2025.txt",
+      "school": "中国矿业大学（北京）",
+      "chars": 2228
+    },
+    {
+      "file": "中国矿业大学（北京）__wifi_faq.txt",
+      "school": "中国矿业大学（北京）",
+      "chars": 647
+    },
+    {
+      "file": "中国社会科学院大学__remote_access.txt",
+      "school": "中国社会科学院大学",
+      "chars": 811
+    },
+    {
+      "file": "中国社会科学院大学__vpn_change_notice.txt",
+      "school": "中国社会科学院大学",
+      "chars": 933
+    },
+    {
+      "file": "中国科学院大学__network_service_guide.pdf",
+      "school": "中国科学院大学",
+      "chars": 28474
+    },
+    {
+      "file": "中国科学院大学__wired_network.txt",
+      "school": "中国科学院大学",
+      "chars": 2526
+    },
+    {
+      "file": "中国科学院大学__wireless_network.txt",
+      "school": "中国科学院大学",
+      "chars": 1557
+    },
+    {
+      "file": "中央戏剧学院__network_guide.txt",
+      "school": "中央戏剧学院",
+      "chars": 1825
+    },
+    {
+      "file": "中央民族大学__network_login_guide.txt",
+      "school": "中央民族大学",
+      "chars": 679
+    },
+    {
+      "file": "中央民族大学__vpn_guide.txt",
+      "school": "中央民族大学",
+      "chars": 966
+    },
+    {
+      "file": "中央财经大学__vpn_faq.txt",
+      "school": "中央财经大学",
+      "chars": 1410
+    },
+    {
+      "file": "中央财经大学__vpn_guide.txt",
+      "school": "中央财经大学",
+      "chars": 1021
+    },
+    {
+      "file": "中央音乐学院__ssl_vpn_guide.txt",
+      "school": "中央音乐学院",
+      "chars": 192
+    },
+    {
+      "file": "北京交通大学__network_access.txt",
+      "school": "北京交通大学",
+      "chars": 1040
+    },
+    {
+      "file": "北京交通大学__network_faq.txt",
+      "school": "北京交通大学",
+      "chars": 3734
+    },
+    {
+      "file": "北京交通大学__vpn_guide.txt",
+      "school": "北京交通大学",
+      "chars": 1860
+    },
+    {
+      "file": "北京体育大学__student_network_guide.txt",
+      "school": "北京体育大学",
+      "chars": 619
+    },
+    {
+      "file": "北京信息科技大学__vpn_guide.txt",
+      "school": "北京信息科技大学",
+      "chars": 1338
+    },
+    {
+      "file": "北京信息科技大学__vpn_manual.pdf",
+      "school": "北京信息科技大学",
+      "chars": 964
+    },
+    {
+      "file": "北京农业职业学院__wifi_faq.txt",
+      "school": "北京农业职业学院",
+      "chars": 293
+    },
+    {
+      "file": "北京农学院__network_faq.txt",
+      "school": "北京农学院",
+      "chars": 1349
+    },
+    {
+      "file": "北京农学院__network_manual_2026.txt",
+      "school": "北京农学院",
+      "chars": 3440
+    },
+    {
+      "file": "北京农学院__service_faq.txt",
+      "school": "北京农学院",
+      "chars": 3865
+    },
+    {
+      "file": "北京化工大学__vpn_desktop.txt",
+      "school": "北京化工大学",
+      "chars": 1074
+    },
+    {
+      "file": "北京化工大学__vpn_guide.txt",
+      "school": "北京化工大学",
+      "chars": 895
+    },
+    {
+      "file": "北京印刷学院__vpn_manual.pdf",
+      "school": "北京印刷学院",
+      "chars": 1259
+    },
+    {
+      "file": "北京外国语大学__vpn_notice.txt",
+      "school": "北京外国语大学",
+      "chars": 678
+    },
+    {
+      "file": "北京外国语大学__webvpn_guide.txt",
+      "school": "北京外国语大学",
+      "chars": 266
+    },
+    {
+      "file": "北京大学__network_account.txt",
+      "school": "北京大学",
+      "chars": 285
+    },
+    {
+      "file": "北京大学__network_faq.txt",
+      "school": "北京大学",
+      "chars": 1287
+    },
+    {
+      "file": "北京大学__vpn_client.txt",
+      "school": "北京大学",
+      "chars": 1872
+    },
+    {
+      "file": "北京大学__vpn_guide.txt",
+      "school": "北京大学",
+      "chars": 1666
+    },
+    {
+      "file": "北京大学__vpn_modes.txt",
+      "school": "北京大学",
+      "chars": 207
+    },
+    {
+      "file": "北京工商大学__network_faq.txt",
+      "school": "北京工商大学",
+      "chars": 1233
+    },
+    {
+      "file": "北京工商大学__vpn_guide.txt",
+      "school": "北京工商大学",
+      "chars": 318
+    },
+    {
+      "file": "北京师范大学__network_faq.txt",
+      "school": "北京师范大学",
+      "chars": 335
+    },
+    {
+      "file": "北京师范大学__network_faq_83804.txt",
+      "school": "北京师范大学",
+      "chars": 1347
+    },
+    {
+      "file": "北京师范大学__network_faq_detail.txt",
+      "school": "北京师范大学",
+      "chars": 365
+    },
+    {
+      "file": "北京建筑大学__portal_guide.txt",
+      "school": "北京建筑大学",
+      "chars": 215
+    },
+    {
+      "file": "北京服装学院__personal_services.txt",
+      "school": "北京服装学院",
+      "chars": 285
+    },
+    {
+      "file": "北京物资学院__network_service.txt",
+      "school": "北京物资学院",
+      "chars": 7167
+    },
+    {
+      "file": "北京科技大学__network_faq.txt",
+      "school": "北京科技大学",
+      "chars": 2356
+    },
+    {
+      "file": "北京科技大学__vpn_client.txt",
+      "school": "北京科技大学",
+      "chars": 693
+    },
+    {
+      "file": "北京科技职业大学__network_authentication.txt",
+      "school": "北京科技职业大学",
+      "chars": 618
+    },
+    {
+      "file": "北京航空航天大学__vpn_guide.txt",
+      "school": "北京航空航天大学",
+      "chars": 242
+    },
+    {
+      "file": "北京航空航天大学__vpn_remote_access.txt",
+      "school": "北京航空航天大学",
+      "chars": 2234
+    },
+    {
+      "file": "北京语言大学__webvpn_guide.txt",
+      "school": "北京语言大学",
+      "chars": 1180
+    },
+    {
+      "file": "北京邮电大学__library_network_service.txt",
+      "school": "北京邮电大学",
+      "chars": 5147
+    },
+    {
+      "file": "北方工业大学__network_account_guide.txt",
+      "school": "北方工业大学",
+      "chars": 1446
+    },
+    {
+      "file": "北方工业大学__vpn_guide.txt",
+      "school": "北方工业大学",
+      "chars": 325
+    },
+    {
+      "file": "华北电力大学__identity_faq.txt",
+      "school": "华北电力大学",
+      "chars": 352
+    },
+    {
+      "file": "华北电力大学__network_faq.txt",
+      "school": "华北电力大学",
+      "chars": 253
+    },
+    {
+      "file": "华北电力大学__network_faq_2.txt",
+      "school": "华北电力大学",
+      "chars": 252
+    },
+    {
+      "file": "对外经济贸易大学__service_manual.pdf",
+      "school": "对外经济贸易大学",
+      "chars": 7396
+    },
+    {
+      "file": "清华大学__campus_network_guide.pdf",
+      "school": "清华大学",
+      "chars": 1962
+    },
+    {
+      "file": "清华大学__endpoint_security.pdf",
+      "school": "清华大学",
+      "chars": 1664
+    },
+    {
+      "file": "清华大学__vpn_help.txt",
+      "school": "清华大学",
+      "chars": 949
+    },
+    {
+      "file": "清华大学__webvpn_mfa.txt",
+      "school": "清华大学",
+      "chars": 1328
+    },
+    {
+      "file": "清华大学__wired_network_access.txt",
+      "school": "清华大学",
+      "chars": 500
+    },
+    {
+      "file": "清华大学__wired_network_auth.txt",
+      "school": "清华大学",
+      "chars": 1356
+    },
+    {
+      "file": "首都医科大学__network_service.txt",
+      "school": "首都医科大学",
+      "chars": 1423
+    }
+  ],
+  "errors": [
+    {
+      "school": "北京理工大学",
+      "url": "https://jwb.bit.edu.cn/docs/2020-06/f80962661f7640fea9bbb7dbcdee5a71.pdf",
+      "error": "404 Client Error: Not Found for url: https://jwb.bit.edu.cn/docs/2020-06/f80962661f7640fea9bbb7dbcdee5a71.pdf"
+    },
+    {
+      "school": "北京邮电大学",
+      "url": "https://nic.bupt.edu.cn/info/1061/1711.htm",
+      "error": "412 Client Error: Precondition Failed for url: https://nic.bupt.edu.cn/info/1061/1711.htm"
+    },
+    {
+      "school": "北京邮电大学",
+      "url": "https://nic.bupt.edu.cn/fwzx/xxfw/tysfrzpt.htm",
+      "error": "412 Client Error: Precondition Failed for url: https://nic.bupt.edu.cn/fwzx/xxfw/tysfrzpt.htm"
+    },
+    {
+      "school": "北京邮电大学",
+      "url": "https://netaccount.bupt.edu.cn/static/temp-user-atrust-vpn",
+      "error": "Likely login/error page: 临时上网账号登录aTrust VPN方法"
+    },
+    {
+      "school": "中国农业大学",
+      "url": "https://io.cau.edu.cn/art/2021/4/20/art_39304_741023.html",
+      "error": "404 Client Error: Not Found for url: https://io.cau.edu.cn/art/2021/4/20/art_39304_741023.html"
+    },
+    {
+      "school": "首都医科大学",
+      "url": "https://icc.ccmu.edu.cn/xywsysm_13782/index.htm",
+      "error": "HTML body too short (140 characters)"
+    },
+    {
+      "school": "北京中医药大学",
+      "url": "https://xxzx.bucm.edu.cn/wlf/xywrz/index.htm",
+      "error": "HTML body too short (43 characters)"
+    },
+    {
+      "school": "中央戏剧学院",
+      "url": "https://chntheatre.edu.cn/cn/xxwlzx/saba/21370.html",
+      "error": "552 Server Error:  for url: https://www.chntheatre.edu.cn/cn/xxwlzx/saba/21370.html"
+    },
+    {
+      "school": "华北电力大学",
+      "url": "https://app.ncepu.edu.cn/wap/material?id=907",
+      "error": "HTML body too short (93 characters)"
+    },
+    {
+      "school": "中国地质大学（北京）",
+      "url": "https://cas.cugb.edu.cn/sso/static/pdf/VPN.pdf",
+      "error": "502 Server Error: Bad Gateway for url: https://cas.cugb.edu.cn/sso/static/pdf/VPN.pdf"
+    },
+    {
+      "school": "北京农业职业学院",
+      "url": "https://www.bvca.edu.cn/xxzx/info/1183/1021.htm",
+      "error": "404 Client Error: Not Found for url: https://www.bvca.edu.cn/xxzx/info/1183/1021.htm"
+    },
+    {
+      "school": "北京交通运输职业学院",
+      "url": "https://www.bjjt.edu.cn/zzjg/jxfzjg/xxzx/xxfw/xtfw.htm",
+      "error": "HTTPSConnectionPool(host='www.bjjt.edu.cn', port=443): Max retries exceeded with url: /zzjg/jxfzjg/xxzx/xxfw/xtfw.htm (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)')))"
+    },
+    {
+      "school": "北京科技职业大学",
+      "url": "https://www.bpu.edu.cn/xxgk/jgsz/xxzx/xxxt/tyrz_wjmm_.htm",
+      "error": "404 Client Error: Not Found for url: https://www.bpu.edu.cn/xxgk/jgsz/xxzx/xxxt/tyrz_wjmm_.htm"
+    },
+    {
+      "school": "中国政法大学",
+      "url": "https://wxb.cupl.edu.cn/info/1037/1311.htm",
+      "error": "HTML body too short (0 characters)"
+    },
+    {
+      "school": "首都经济贸易大学",
+      "url": "https://jwc.cueb.edu.cn/docs/2023-09/20230922142618904368.pdf",
+      "error": "Document larger than 12 MB"
+    }
+  ]
+}

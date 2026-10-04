@@ -1,6 +1,10 @@
 """Index PDF/TXT files from data/sample_docs with explicit source provenance."""
 
 import json
+import gc
+import shutil
+import tempfile
+from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -9,6 +13,7 @@ from langchain_community.document_loaders import PyPDFLoader, TextLoader
 
 from app.core.config import settings
 from app.services.vectorstore import get_vectorstore
+from app.services.schools import beijing_schools
 
 load_dotenv()
 DOCS_PATH = Path("data/sample_docs")
@@ -29,9 +34,17 @@ def load_documents():
         authority = info.get("authority", "unverified")
         if authority not in ("official", "unverified"):
             raise ValueError(f"Invalid authority for {path.name}: {authority}")
-        for doc in loader.load():
+        school = info.get("school", "")
+        if school and school not in beijing_schools():
+            raise ValueError(f"Unknown school for {path.name}: {school}")
+        if authority == "official" and (not school or not info.get("url")):
+            raise ValueError(f"Official source requires school and URL: {path.name}")
+        loaded = [doc for doc in loader.load() if doc.page_content.strip()]
+        if authority == "official" and not loaded:
+            raise ValueError(f"Official source has no extractable text: {path.name}")
+        for doc in loaded:
             doc.metadata["authority"] = authority
-            doc.metadata["school"] = info.get("school", "")
+            doc.metadata["school"] = school
             doc.metadata["url"] = info.get("url", "")
             docs.append(doc)
     return docs
@@ -45,11 +58,28 @@ def ingest():
         chunk_size=settings.chunk_size,
         chunk_overlap=settings.chunk_overlap,
     ).split_documents(docs)
-    store = get_vectorstore()
-    # Rebuild the demo collection so repeated ingestion never leaves stale chunks.
-    store.delete_collection()
-    store = get_vectorstore()
-    store.add_documents(chunks)
+    target = Path(settings.chroma_db_path).resolve()
+    target.parent.mkdir(parents=True, exist_ok=True)
+    staged = Path(tempfile.mkdtemp(prefix="chroma-build-", dir=target.parent))
+    try:
+        store = get_vectorstore(str(staged))
+        # Avoid oversized batches in Chroma and keep source metadata per chunk.
+        for start in range(0, len(chunks), 64):
+            store.add_documents(chunks[start:start + 64])
+        del store
+        gc.collect()
+        backup = target.with_name(target.name + ".backup-" + datetime.now().strftime("%Y%m%d%H%M%S"))
+        if target.exists():
+            target.rename(backup)
+        try:
+            staged.rename(target)
+        except Exception:
+            if backup.exists():
+                backup.rename(target)
+            raise
+    except Exception:
+        shutil.rmtree(staged, ignore_errors=True)
+        raise
     print(f"Indexed {len(docs)} pages, {len(chunks)} chunks from {len(set(d.metadata['source'] for d in docs))} files")
 
 

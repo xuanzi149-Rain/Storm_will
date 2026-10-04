@@ -1,0 +1,99 @@
+学校：北京大学
+标题：北京大学网络服务
+官方来源：https://its.pku.edu.cn/service_1_vpn_client.jsp
+抓取日期：2026-10-04
+
+提示：VPN使用中出现问题，请参考
+“
+VPN常见问题
+”
+排查解决。若咨询客服请把排查过程、结果及账号发送至its@pku.edu.cn。
+一、
+下载安装VPN客户端：
+A.
+Windows系统
+1) 基于X86/X64处理器的Windows 10和11系统
+a) 新版本
+ps-pulse-win-22.7r1.0
+b) 旧版本
+ps-pulse-win64-9.1r13.1
+2) 基于X86/X64处理器的Windows7及之前版本 --->
+pulse-win64-5.3r4.0（64位）
+、
+pulse-win32-5.3r4.0.msi（32位）
+。
+3) 基于ARM处理器的 Windows系统
+a)新版本
+ps-pulse-win-22.7r1.0-b28369-ARM64bit-installer.msi
+b) 旧版本
+ps-pulse-win-9.1r14.0-ARM64bitinstaller.msi
+B.
+MAC OS系统
+1) macOS Sequoia 15.3 或 M3芯片系列 --->
+ps-pulse-mac-22.8r1.dmg
+2) macOS Sonoma 14.4及以上 --->
+ps-pulse-mac-22.7r3.dmg
+3) macOS Sonoma 14以上 --->
+ps-pulse-mac-22.7r1.0.dmg
+4) macOS Ventura 13以上 --->
+ps-pulse-mac-22.6r1.0
+5) macOS Monterey 12 及之下 --->
+ps-pulse-mac-9.1r15.4
+若安装时系统提示“无法打开安装包，此软件需要更新”等信息，请进系统偏好-安全与隐私-通用（一般），选择允许任意来源的App安装，然后再重新安装。
+macOS早期版本 --->
+JunosPulse.dmg
+C.
+Linux系统
+1)
+ps-pulse-22.7r1.0-b28369-package.pkg
+2)
+ps-pulse-linux-22.8r2.deb
+若安装过程中系统提示需要libwebkit2gtk-4.0-37库，请参考
+https://github.com/bambulab/BambuStudio/issues/3973#issuecomment-2085476683
+解决。
+3)
+<
+ps-pulse-linux-22.7r1.0-b28369-64bit-installer.rpm
+4)
+<
+ps-pulse-linux-rhel7-22.7r1.0-b28369.rpm
+D.
+苹果IOS系统
+，在AppStore搜索并安装Ivanti Secure Access Client的App，并在App首页的url填写vpn.pku.edu.cn或pacvpn.pku.edu.cn。
+E.
+安卓系统
+，请在应用宝搜索安装Ivanti Secure Access Client或Pulse Secure的App或点击下载安装（
+22.4.1版本
+、
+9.8版本
+、
+9.5版本
+、
+7.2.1版本
+、
+5.0.3版本
+）
+二、
+配置VPN服务器：
+系统提供两种使用方式，全业务和北大内网模式，本指南对二者都进行了配置，用户可根据每次的业务需求，通过选择不同的登录入口实现不同模式的切换。若只有一种业务需求，只选对应的一种配置即可。
+A．全业务模式（全网）:
+以校园网IP访问互联网资源，可检索和下载学校图书馆电子资源。
+B．北大内网模式（内网）:
+专供校园内网业务系统的访问，其它资源由用户本地网直接访问。
+配置步骤：
+下述配置步骤以WINDOWS系统为例，其它系统配置类似。
+1. 打开程序 “开始－>Pulse Secure－>Pulse Secure”，鼠标点图示中的”+”。
+2. 在新弹出的窗口中，填写下图示中的配置内容后，点“添加（A）”按钮。
+1) 全业务模式（全网）: vpn.pku.edu.cn
+2) 北大内网模式：pacvpn.pku.edu.cn
+两种模式都添加后的结果：
+三、
+登录VPN
+1. 根据需求，选择对应的VPN入口登录。
+如访问“北大内网”，点“连接”按钮。
+2. 在弹出窗口输入用户名/密码。
+若为个人电脑，选中“保持设置”选项，后续登录无需再输入密码。
+3. 登录成功。
+已接入北大内网，打开浏览器或其它应用程序访问内网系统。
+4. 退出VPN系统。
+点击上图的“断开连接”即可退出。

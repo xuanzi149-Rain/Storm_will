@@ -1,0 +1,165 @@
+{
+  "as_of": "2026-10-04",
+  "school_total": 38,
+  "schools_with_official_files": 38,
+  "official_file_total": 80,
+  "covered": {
+    "中国人民公安大学": [
+      "中国人民公安大学__remote_access.txt"
+    ],
+    "中国人民大学": [
+      "中国人民大学__vpn_guide.txt",
+      "中国人民大学__wired_network.txt"
+    ],
+    "中国传媒大学": [
+      "中国传媒大学__it_services_2025.txt",
+      "中国传媒大学__network_access.txt",
+      "中国传媒大学__network_faq.txt",
+      "中国传媒大学__new_student_guide.txt"
+    ],
+    "中国农业大学": [
+      "中国农业大学__remote_access.txt"
+    ],
+    "中国劳动关系学院": [
+      "中国劳动关系学院__network_notice.txt",
+      "中国劳动关系学院__vpn_guide.txt"
+    ],
+    "中国地质大学（北京）": [
+      "中国地质大学（北京）__vpn_access.txt"
+    ],
+    "中国石油大学（北京）": [
+      "中国石油大学（北京）__network_manual.txt",
+      "中国石油大学（北京）__vpn_faq.txt"
+    ],
+    "中国矿业大学（北京）": [
+      "中国矿业大学（北京）__account_faq.txt",
+      "中国矿业大学（北京）__network_faq.txt",
+      "中国矿业大学（北京）__network_guide.txt",
+      "中国矿业大学（北京）__network_guide_2025.txt",
+      "中国矿业大学（北京）__wifi_faq.txt"
+    ],
+    "中国社会科学院大学": [
+      "中国社会科学院大学__remote_access.txt",
+      "中国社会科学院大学__vpn_change_notice.txt"
+    ],
+    "中国科学院大学": [
+      "中国科学院大学__network_service_guide.pdf",
+      "中国科学院大学__wired_network.txt",
+      "中国科学院大学__wireless_network.txt"
+    ],
+    "中央戏剧学院": [
+      "中央戏剧学院__identity_guide.txt",
+      "中央戏剧学院__network_guide.txt"
+    ],
+    "中央民族大学": [
+      "中央民族大学__network_login_guide.txt",
+      "中央民族大学__vpn_guide.txt"
+    ],
+    "中央财经大学": [
+      "中央财经大学__vpn_faq.txt",
+      "中央财经大学__vpn_guide.txt"
+    ],
+    "中央音乐学院": [
+      "中央音乐学院__ssl_vpn_guide.txt"
+    ],
+    "北京交通大学": [
+      "北京交通大学__network_access.txt",
+      "北京交通大学__network_faq.txt",
+      "北京交通大学__vpn_guide.txt"
+    ],
+    "北京体育大学": [
+      "北京体育大学__student_network_guide.txt"
+    ],
+    "北京信息科技大学": [
+      "北京信息科技大学__vpn_guide.txt",
+      "北京信息科技大学__vpn_manual.pdf"
+    ],
+    "北京农业职业学院": [
+      "北京农业职业学院__wifi_faq.txt"
+    ],
+    "北京农学院": [
+      "北京农学院__network_faq.txt",
+      "北京农学院__network_manual_2026.txt",
+      "北京农学院__service_faq.txt"
+    ],
+    "北京化工大学": [
+      "北京化工大学__vpn_desktop.txt",
+      "北京化工大学__vpn_guide.txt"
+    ],
+    "北京印刷学院": [
+      "北京印刷学院__vpn_manual.pdf"
+    ],
+    "北京外国语大学": [
+      "北京外国语大学__vpn_notice.txt",
+      "北京外国语大学__webvpn_guide.txt"
+    ],
+    "北京大学": [
+      "北京大学__network_account.txt",
+      "北京大学__network_faq.txt",
+      "北京大学__vpn_client.txt",
+      "北京大学__vpn_guide.txt",
+      "北京大学__vpn_modes.txt"
+    ],
+    "北京工商大学": [
+      "北京工商大学__network_faq.txt",
+      "北京工商大学__vpn_guide.txt"
+    ],
+    "北京师范大学": [
+      "北京师范大学__network_faq.txt",
+      "北京师范大学__network_faq_83804.txt",
+      "北京师范大学__network_faq_detail.txt"
+    ],
+    "北京建筑大学": [
+      "北京建筑大学__portal_guide.txt"
+    ],
+    "北京服装学院": [
+      "北京服装学院__personal_services.txt"
+    ],
+    "北京物资学院": [
+      "北京物资学院__network_service.txt"
+    ],
+    "北京科技大学": [
+      "北京科技大学__network_faq.txt",
+      "北京科技大学__vpn_client.txt"
+    ],
+    "北京科技职业大学": [
+      "北京科技职业大学__network_authentication.txt"
+    ],
+    "北京航空航天大学": [
+      "北京航空航天大学__vpn_guide.txt",
+      "北京航空航天大学__vpn_remote_access.txt"
+    ],
+    "北京语言大学": [
+      "北京语言大学__webvpn_guide.txt"
+    ],
+    "北京邮电大学": [
+      "北京邮电大学__library_network_service.txt",
+      "北邮VPN官方资料摘录.txt",
+      "北邮网络服务官方资料摘录.txt",
+      "北邮账号官方资料摘录.txt"
+    ],
+    "北方工业大学": [
+      "北方工业大学__network_account_guide.txt",
+      "北方工业大学__vpn_guide.txt"
+    ],
+    "华北电力大学": [
+      "华北电力大学__identity_faq.txt",
+      "华北电力大学__network_faq.txt"
+    ],
+    "对外经济贸易大学": [
+      "对外经济贸易大学__service_manual.pdf"
+    ],
+    "清华大学": [
+      "清华大学__campus_network_guide.pdf",
+      "清华大学__endpoint_security.pdf",
+      "清华大学__vpn_help.txt",
+      "清华大学__webvpn_mfa.txt",
+      "清华大学__wired_network_access.txt",
+      "清华大学__wired_network_auth.txt"
+    ],
+    "首都医科大学": [
+      "首都医科大学__network_service.txt"
+    ]
+  },
+  "without_official_files": []
+}

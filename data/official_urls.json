@@ -1,0 +1,518 @@
+[
+  {
+    "school": "北京大学",
+    "slug": "vpn_guide",
+    "domain": "pku.edu.cn",
+    "url": "https://its.pku.edu.cn/service_1_vpn.jsp"
+  },
+  {
+    "school": "北京大学",
+    "slug": "network_faq",
+    "domain": "pku.edu.cn",
+    "url": "https://its.pku.edu.cn/faq.jsp"
+  },
+  {
+    "school": "北京大学",
+    "slug": "network_account",
+    "domain": "pku.edu.cn",
+    "url": "https://its.pku.edu.cn/about.jsp"
+  },
+  {
+    "school": "中国人民大学",
+    "slug": "vpn_guide",
+    "domain": "ruc.edu.cn",
+    "url": "https://it.ruc.edu.cn/fwzn/VPN/371bbcac64e24b799f2c003b081f7848.htm"
+  },
+  {
+    "school": "中国人民大学",
+    "slug": "wired_network",
+    "domain": "ruc.edu.cn",
+    "url": "https://it.ruc.edu.cn/fwzn/xyw/0160c838ea314468adfc0d41dcfa8829.htm"
+  },
+  {
+    "school": "清华大学",
+    "slug": "vpn_help",
+    "domain": "tsinghua.edu.cn",
+    "url": "https://www.itc.tsinghua.edu.cn/vpnhelp/index.htm"
+  },
+  {
+    "school": "清华大学",
+    "slug": "campus_network_guide",
+    "domain": "tsinghua.edu.cn",
+    "url": "https://its.tsinghua.edu.cn/__local/4/DE/70/09B0E55BFA6E2B7F2A8DB1D257F_BC58902D_2C2E09.pdf"
+  },
+  {
+    "school": "清华大学",
+    "slug": "wired_network_access",
+    "domain": "tsinghua.edu.cn",
+    "url": "https://its.tsinghua.edu.cn/1wzcycejdh_content.jsp?urltype=news.NewsContentUrl&wbnewsid=4007&wbtreeid=1770"
+  },
+  {
+    "school": "清华大学",
+    "slug": "wired_network_auth",
+    "domain": "tsinghua.edu.cn",
+    "url": "https://its.tsinghua.edu.cn/1wzcycejdh_content.jsp?urltype=news.NewsContentUrl&wbnewsid=4006&wbtreeid=1770"
+  },
+  {
+    "school": "清华大学",
+    "slug": "webvpn_mfa",
+    "domain": "tsinghua.edu.cn",
+    "url": "https://its.tsinghua.edu.cn/1wzcycejdh_content.jsp?urltype=news.NewsContentUrl&wbnewsid=4000&wbtreeid=1771"
+  },
+  {
+    "school": "清华大学",
+    "slug": "endpoint_security",
+    "domain": "tsinghua.edu.cn",
+    "url": "https://its.tsinghua.edu.cn/__local/A/08/83/982FDBFBC582BA36D46B72C8CE2_95F6AF17_1F6B94.pdf"
+  },
+  {
+    "school": "北京交通大学",
+    "slug": "vpn_guide",
+    "domain": "bjtu.edu.cn",
+    "url": "https://ic.bjtu.edu.cn/fwzn/xxxtzn/185060.htm"
+  },
+  {
+    "school": "北京交通大学",
+    "slug": "network_faq",
+    "domain": "bjtu.edu.cn",
+    "url": "https://ic.bjtu.edu.cn/fwzn/wlfwzn/185052.htm"
+  },
+  {
+    "school": "北京交通大学",
+    "slug": "network_access",
+    "domain": "bjtu.edu.cn",
+    "url": "https://ic.bjtu.edu.cn/fwzn/wlfwzn/202312314.htm"
+  },
+  {
+    "school": "北京航空航天大学",
+    "slug": "vpn_remote_access",
+    "domain": "buaa.edu.cn",
+    "url": "https://www.buaa.edu.cn/info/1168/2138.htm"
+  },
+  {
+    "school": "北京航空航天大学",
+    "slug": "vpn_guide",
+    "domain": "buaa.edu.cn",
+    "url": "https://jiaowu.buaa.edu.cn/info/1027/1791.htm"
+  },
+  {
+    "school": "北京科技大学",
+    "slug": "vpn_client",
+    "domain": "ustb.edu.cn",
+    "url": "https://info.ustb.edu.cn/xxfw/wlfw/VPNkhd/index.htm"
+  },
+  {
+    "school": "北方工业大学",
+    "slug": "vpn_guide",
+    "domain": "ncut.edu.cn",
+    "url": "https://www.ncut.edu.cn/info/1085/5701.htm"
+  },
+  {
+    "school": "北方工业大学",
+    "slug": "network_account_guide",
+    "domain": "ncut.edu.cn",
+    "url": "https://yjsy.ncut.edu.cn/info/1185/3626.htm"
+  },
+  {
+    "school": "北京化工大学",
+    "slug": "vpn_guide",
+    "domain": "buct.edu.cn",
+    "url": "https://cit.buct.edu.cn/2019/0524/c168a94982/page.htm"
+  },
+  {
+    "school": "北京化工大学",
+    "slug": "vpn_desktop",
+    "domain": "buct.edu.cn",
+    "url": "https://vpn.buct.edu.cn/2022/0928/c12807a172088/page.htm"
+  },
+  {
+    "school": "北京工商大学",
+    "slug": "network_faq",
+    "domain": "btbu.edu.cn",
+    "url": "https://nic.btbu.edu.cn/swyw/cjwt/"
+  },
+  {
+    "school": "北京工商大学",
+    "slug": "vpn_guide",
+    "domain": "btbu.edu.cn",
+    "url": "https://nic.btbu.edu.cn/yyxt/vpn/165723.htm"
+  },
+  {
+    "school": "北京服装学院",
+    "slug": "personal_services",
+    "domain": "bift.edu.cn",
+    "url": "https://itc.bift.edu.cn/fwzn/gryh/index.htm"
+  },
+  {
+    "school": "北京邮电大学",
+    "slug": "vpn_guide",
+    "domain": "bupt.edu.cn",
+    "url": "https://nic.bupt.edu.cn/info/1061/1711.htm"
+  },
+  {
+    "school": "北京邮电大学",
+    "slug": "identity_service",
+    "domain": "bupt.edu.cn",
+    "url": "https://nic.bupt.edu.cn/fwzx/xxfw/tysfrzpt.htm"
+  },
+  {
+    "school": "北京邮电大学",
+    "slug": "temporary_account_vpn",
+    "domain": "bupt.edu.cn",
+    "url": "https://netaccount.bupt.edu.cn/static/temp-user-atrust-vpn"
+  },
+  {
+    "school": "北京邮电大学",
+    "slug": "library_network_service",
+    "domain": "bupt.edu.cn",
+    "url": "https://libportal.bupt.edu.cn/a/fuwu/shangwangfuwu/"
+  },
+  {
+    "school": "北京印刷学院",
+    "slug": "vpn_manual",
+    "domain": "bigc.edu.cn",
+    "url": "https://its.bigc.edu.cn/docs/2025-04/019a934cc4cd4a5bab494983d859c657.pdf"
+  },
+  {
+    "school": "北京建筑大学",
+    "slug": "portal_guide",
+    "domain": "bucea.edu.cn",
+    "url": "https://nic.bucea.edu.cn/fwzx/c/xxmh/index.htm"
+  },
+  {
+    "school": "中国农业大学",
+    "slug": "network_account",
+    "domain": "cau.edu.cn",
+    "url": "https://io.cau.edu.cn/art/2021/4/20/art_39304_741023.html"
+  },
+  {
+    "school": "中国农业大学",
+    "slug": "remote_access",
+    "domain": "cau.edu.cn",
+    "url": "https://www.cau.edu.cn/tzgg/472479.htm"
+  },
+  {
+    "school": "北京农学院",
+    "slug": "network_manual_2026",
+    "domain": "bua.edu.cn",
+    "url": "https://e.bua.edu.cn/info/1062/1498.htm"
+  },
+  {
+    "school": "北京农学院",
+    "slug": "network_faq",
+    "domain": "bua.edu.cn",
+    "url": "https://e.bua.edu.cn/info/1062/1127.htm"
+  },
+  {
+    "school": "北京农学院",
+    "slug": "service_faq",
+    "domain": "bua.edu.cn",
+    "url": "https://e.bua.edu.cn/info/1070/1488.htm"
+  },
+  {
+    "school": "首都医科大学",
+    "slug": "network_manual",
+    "domain": "ccmu.edu.cn",
+    "url": "https://icc.ccmu.edu.cn/xywsysm_13782/index.htm"
+  },
+  {
+    "school": "首都医科大学",
+    "slug": "network_service",
+    "domain": "ccmu.edu.cn",
+    "url": "https://icc.ccmu.edu.cn/xywsysm_13782/77033.htm"
+  },
+  {
+    "school": "北京师范大学",
+    "slug": "network_faq",
+    "domain": "bnu.edu.cn",
+    "url": "https://info.bnu.edu.cn/cjwd/xywcjwtjd/index.html"
+  },
+  {
+    "school": "北京师范大学",
+    "slug": "network_faq_detail",
+    "domain": "bnu.edu.cn",
+    "url": "https://info.bnu.edu.cn/cjwd/xywcjwtjd/40fac06dcdb247a7a8e8376eec422e3b.html"
+  },
+  {
+    "school": "北京外国语大学",
+    "slug": "vpn_notice",
+    "domain": "bfsu.edu.cn",
+    "url": "https://itc.bfsu.edu.cn/info/1052/9861.htm"
+  },
+  {
+    "school": "北京外国语大学",
+    "slug": "webvpn_guide",
+    "domain": "bfsu.edu.cn",
+    "url": "https://itc.bfsu.edu.cn/xxhfwzn/zyfwkzxt_WebVPN_.htm"
+  },
+  {
+    "school": "北京语言大学",
+    "slug": "webvpn_guide",
+    "domain": "blcu.edu.cn",
+    "url": "https://xxb.blcu.edu.cn/fwzn1/webvpn1/syzn.htm"
+  },
+  {
+    "school": "中央财经大学",
+    "slug": "vpn_faq",
+    "domain": "cufe.edu.cn",
+    "url": "https://vpn.cufe.edu.cn/info/1002/1101.htm"
+  },
+  {
+    "school": "中央财经大学",
+    "slug": "vpn_guide",
+    "domain": "cufe.edu.cn",
+    "url": "https://zhxy.cufe.edu.cn/info/1082/4256.htm"
+  },
+  {
+    "school": "对外经济贸易大学",
+    "slug": "service_manual",
+    "domain": "uibe.edu.cn",
+    "url": "https://im.uibe.edu.cn/docs/2024-07/6888cf23facb4468a25187b1f52a7e38.pdf"
+  },
+  {
+    "school": "北京物资学院",
+    "slug": "network_service",
+    "domain": "bwu.edu.cn",
+    "url": "https://is.bwu.edu.cn/info/1114/2271.htm"
+  },
+  {
+    "school": "中国人民公安大学",
+    "slug": "remote_access",
+    "domain": "ppsuc.edu.cn",
+    "url": "https://www.ppsuc.edu.cn/info/1022/6557.htm"
+  },
+  {
+    "school": "北京体育大学",
+    "slug": "student_network_guide",
+    "domain": "bsu.edu.cn",
+    "url": "https://it.bsu.edu.cn/fwzn/xs/da30f9c76294400bab91cb98384debca.htm"
+  },
+  {
+    "school": "中央音乐学院",
+    "slug": "ssl_vpn_guide",
+    "domain": "ccom.edu.cn",
+    "url": "https://www.ccom.edu.cn/info/9281/79791.htm"
+  },
+  {
+    "school": "中央戏剧学院",
+    "slug": "network_guide",
+    "domain": "chntheatre.edu.cn",
+    "url": "https://chntheatre.edu.cn/cn/xxwlzx/saba/21369.html"
+  },
+  {
+    "school": "中央戏剧学院",
+    "slug": "identity_guide",
+    "domain": "chntheatre.edu.cn",
+    "url": "https://chntheatre.edu.cn/cn/xxwlzx/saba/21370.html"
+  },
+  {
+    "school": "中央民族大学",
+    "slug": "vpn_guide",
+    "domain": "muc.edu.cn",
+    "url": "https://met.muc.edu.cn/info/1046/1674.htm"
+  },
+  {
+    "school": "中央民族大学",
+    "slug": "network_login_guide",
+    "domain": "muc.edu.cn",
+    "url": "https://met.muc.edu.cn/info/1008/1846.htm"
+  },
+  {
+    "school": "华北电力大学",
+    "slug": "vpn_guide",
+    "domain": "ncepu.edu.cn",
+    "url": "https://app.ncepu.edu.cn/wap/material?id=907"
+  },
+  {
+    "school": "华北电力大学",
+    "slug": "network_faq",
+    "domain": "ncepu.edu.cn",
+    "url": "https://its.ncepu.edu.cn/cjwt/wl/52529cfa567a42d4a6f77b5142f67912.htm"
+  },
+  {
+    "school": "华北电力大学",
+    "slug": "identity_faq",
+    "domain": "ncepu.edu.cn",
+    "url": "https://its.ncepu.edu.cn/cjwt/tysfrz/4912194e04804f9483514d88012d07d0.htm"
+  },
+  {
+    "school": "北京信息科技大学",
+    "slug": "vpn_guide",
+    "domain": "bistu.edu.cn",
+    "url": "https://inc.bistu.edu.cn/fwzn/fwzn_wljc/379621.html"
+  },
+  {
+    "school": "北京信息科技大学",
+    "slug": "vpn_manual",
+    "domain": "bistu.edu.cn",
+    "url": "https://inc.bistu.edu.cn/docs/2024-03/P020220609547463870782.pdf"
+  },
+  {
+    "school": "中国矿业大学（北京）",
+    "slug": "network_faq",
+    "domain": "cumtb.edu.cn",
+    "url": "https://info.cumtb.edu.cn/cjwt.htm"
+  },
+  {
+    "school": "中国石油大学（北京）",
+    "slug": "vpn_faq",
+    "domain": "cup.edu.cn",
+    "url": "https://www.cup.edu.cn/nic/ggfw/grfw/vpn/vpncjwt/index.htm"
+  },
+  {
+    "school": "中国石油大学（北京）",
+    "slug": "network_manual",
+    "domain": "cup.edu.cn",
+    "url": "https://www.cup.edu.cn/nic/ggfw/grfw/xyw/xywsysm/index.htm"
+  },
+  {
+    "school": "中国地质大学（北京）",
+    "slug": "vpn_manual",
+    "domain": "cugb.edu.cn",
+    "url": "https://cas.cugb.edu.cn/sso/static/pdf/VPN.pdf"
+  },
+  {
+    "school": "中国地质大学（北京）",
+    "slug": "vpn_access",
+    "domain": "cugb.edu.cn",
+    "url": "https://www.cugb.edu.cn/vpnjr.jhtml"
+  },
+  {
+    "school": "中国劳动关系学院",
+    "slug": "vpn_guide",
+    "domain": "culr.edu.cn",
+    "url": "https://news.culr.edu.cn/wlxxzx/wlfw/vpngl/23621.htm"
+  },
+  {
+    "school": "中国劳动关系学院",
+    "slug": "network_notice",
+    "domain": "culr.edu.cn",
+    "url": "https://news.culr.edu.cn/xygg/notice/wl/23617.htm"
+  },
+  {
+    "school": "北京农业职业学院",
+    "slug": "wifi_faq",
+    "domain": "bvca.edu.cn",
+    "url": "https://www.bvca.edu.cn/xxzx/info/1039/1079.htm"
+  },
+  {
+    "school": "北京农业职业学院",
+    "slug": "vpn_guide",
+    "domain": "bvca.edu.cn",
+    "url": "https://www.bvca.edu.cn/xxzx/info/1183/1021.htm"
+  },
+  {
+    "school": "中国社会科学院大学",
+    "slug": "remote_access",
+    "domain": "ucass.edu.cn",
+    "url": "https://nc.ucass.edu.cn/wlfw/ycfw.htm"
+  },
+  {
+    "school": "中国社会科学院大学",
+    "slug": "vpn_change_notice",
+    "domain": "ucass.edu.cn",
+    "url": "https://nc.ucass.edu.cn/info/1055/1692.htm"
+  },
+  {
+    "school": "中国科学院大学",
+    "slug": "network_service_guide",
+    "domain": "ucas.edu.cn",
+    "url": "https://sep.ucas.edu.cn/resources/doc/User_Service_Guide%5BYJS%5D.pdf"
+  },
+  {
+    "school": "中国科学院大学",
+    "slug": "wired_network",
+    "domain": "ucas.edu.cn",
+    "url": "https://inc.ucas.edu.cn/index.php/zh/xyws/yxwe"
+  },
+  {
+    "school": "中国科学院大学",
+    "slug": "wireless_network",
+    "domain": "ucas.ac.cn",
+    "url": "https://inc.ucas.ac.cn/index.php/zh/xyws/wxwe"
+  },
+  {
+    "school": "北京科技职业大学",
+    "slug": "network_authentication",
+    "domain": "bpu.edu.cn",
+    "url": "https://www.bpu.edu.cn/xxgk/jgsz/xxzx/xyw/rwrz.htm"
+  },
+  {
+    "school": "北京科技职业大学",
+    "slug": "password_reset",
+    "domain": "bpu.edu.cn",
+    "url": "https://www.bpu.edu.cn/xxgk/jgsz/xxzx/xxxt/tyrz_wjmm_.htm"
+  },
+  {
+    "school": "中国传媒大学",
+    "slug": "network_access",
+    "domain": "cuc.edu.cn",
+    "url": "https://its.cuc.edu.cn/2022/0922/c8498a199120/page.htm"
+  },
+  {
+    "school": "中国传媒大学",
+    "slug": "it_services_2025",
+    "domain": "cuc.edu.cn",
+    "url": "https://its.cuc.edu.cn/2025/0408/c8169a254082/page.htm"
+  },
+  {
+    "school": "中国传媒大学",
+    "slug": "new_student_guide",
+    "domain": "cuc.edu.cn",
+    "url": "https://its.cuc.edu.cn/2025/1120/c8169a263982/page.htm"
+  },
+  {
+    "school": "中国传媒大学",
+    "slug": "network_faq",
+    "domain": "cuc.edu.cn",
+    "url": "https://its.cuc.edu.cn/bz/list.htm"
+  },
+  {
+    "school": "北京大学",
+    "slug": "vpn_client",
+    "domain": "pku.edu.cn",
+    "url": "https://its.pku.edu.cn/service_1_vpn_client.jsp"
+  },
+  {
+    "school": "北京大学",
+    "slug": "vpn_modes",
+    "domain": "pku.edu.cn",
+    "url": "https://its.pku.edu.cn/service_1_vpn_readme.jsp"
+  },
+  {
+    "school": "北京科技大学",
+    "slug": "network_faq",
+    "domain": "ustb.edu.cn",
+    "url": "https://info.ustb.edu.cn/xxfw/wlfw/xywcjwt/index.htm"
+  },
+  {
+    "school": "北京师范大学",
+    "slug": "network_faq_83804",
+    "domain": "bnu.edu.cn",
+    "url": "https://info.bnu.edu.cn/cjwd/xywcjwtjd/83804.html"
+  },
+  {
+    "school": "中国矿业大学（北京）",
+    "slug": "network_guide_2025",
+    "domain": "cumtb.edu.cn",
+    "url": "https://info.cumtb.edu.cn/info/1016/3007.htm"
+  },
+  {
+    "school": "中国矿业大学（北京）",
+    "slug": "network_guide",
+    "domain": "cumtb.edu.cn",
+    "url": "https://info.cumtb.edu.cn/info/1016/1799.htm"
+  },
+  {
+    "school": "中国矿业大学（北京）",
+    "slug": "account_faq",
+    "domain": "cumtb.edu.cn",
+    "url": "https://info.cumtb.edu.cn/info/1007/1736.htm"
+  },
+  {
+    "school": "中国矿业大学（北京）",
+    "slug": "wifi_faq",
+    "domain": "cumtb.edu.cn",
+    "url": "https://info.cumtb.edu.cn/info/1007/1362.htm"
+  }
+]

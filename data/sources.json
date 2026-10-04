@@ -1,6 +1,561 @@
 {
-  "北邮网络资源手册_副本.pdf": {"authority": "unverified", "school": "北京邮电大学", "url": ""},
-  "北邮VPN官方资料摘录.txt": {"authority": "official", "school": "北京邮电大学", "url": "https://nic.bupt.edu.cn/info/1061/1711.htm"},
-  "北邮账号官方资料摘录.txt": {"authority": "official", "school": "北京邮电大学", "url": "https://nic.bupt.edu.cn/fwzx/xxfw/tysfrzpt.htm"},
-  "北邮网络服务官方资料摘录.txt": {"authority": "official", "school": "北京邮电大学", "url": "https://nic.bupt.edu.cn/"}
+  "北邮网络资源手册_副本.pdf": {
+    "authority": "unverified",
+    "school": "北京邮电大学",
+    "url": ""
+  },
+  "北邮VPN官方资料摘录.txt": {
+    "authority": "official",
+    "school": "北京邮电大学",
+    "url": "https://nic.bupt.edu.cn/info/1061/1711.htm"
+  },
+  "北邮账号官方资料摘录.txt": {
+    "authority": "official",
+    "school": "北京邮电大学",
+    "url": "https://nic.bupt.edu.cn/fwzx/xxfw/tysfrzpt.htm"
+  },
+  "北邮网络服务官方资料摘录.txt": {
+    "authority": "official",
+    "school": "北京邮电大学",
+    "url": "https://nic.bupt.edu.cn/"
+  },
+  "北京大学__network_account.txt": {
+    "authority": "official",
+    "school": "北京大学",
+    "url": "https://its.pku.edu.cn/about.jsp",
+    "title": "北京大学网络服务",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京大学__network_faq.txt": {
+    "authority": "official",
+    "school": "北京大学",
+    "url": "https://its.pku.edu.cn/faq.jsp",
+    "title": "北京大学网络服务",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国人民大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "中国人民大学",
+    "url": "https://it.ruc.edu.cn/fwzn/VPN/371bbcac64e24b799f2c003b081f7848.htm",
+    "title": "人大VPN使用指南-信息技术中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北京大学",
+    "url": "https://its.pku.edu.cn/service_1_vpn.jsp",
+    "title": "北京大学网络服务",
+    "retrieved_at": "2026-10-04"
+  },
+  "清华大学__vpn_help.txt": {
+    "authority": "official",
+    "school": "清华大学",
+    "url": "https://www.itc.tsinghua.edu.cn/vpnhelp/index.htm",
+    "title": "清华大学VPN帮助网",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京交通大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北京交通大学",
+    "url": "https://ic.bjtu.edu.cn/fwzn/xxxtzn/185060.htm",
+    "title": "北京交通大学网信办·信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京交通大学__network_faq.txt": {
+    "authority": "official",
+    "school": "北京交通大学",
+    "url": "https://ic.bjtu.edu.cn/fwzn/wlfwzn/185052.htm",
+    "title": "北京交通大学网信办·信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京交通大学__network_access.txt": {
+    "authority": "official",
+    "school": "北京交通大学",
+    "url": "https://ic.bjtu.edu.cn/fwzn/wlfwzn/202312314.htm",
+    "title": "北京交通大学网信办·信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京航空航天大学__vpn_remote_access.txt": {
+    "authority": "official",
+    "school": "北京航空航天大学",
+    "url": "https://www.buaa.edu.cn/info/1168/2138.htm",
+    "title": "北航VPN等信息系统助你在家工作学习-北京航空航天大学",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京航空航天大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北京航空航天大学",
+    "url": "https://jiaowu.buaa.edu.cn/info/1027/1791.htm",
+    "title": "VPN使用说明-北京航空航天大学教务部",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国人民大学__wired_network.txt": {
+    "authority": "official",
+    "school": "中国人民大学",
+    "url": "https://it.ruc.edu.cn/fwzn/xyw/0160c838ea314468adfc0d41dcfa8829.htm",
+    "title": "使用有线网-信息技术中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北方工业大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北方工业大学",
+    "url": "https://www.ncut.edu.cn/info/1085/5701.htm",
+    "title": "关于WebVPN系统正式投入使用的通知-北方工业大学",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京科技大学__vpn_client.txt": {
+    "authority": "official",
+    "school": "北京科技大学",
+    "url": "https://info.ustb.edu.cn/xxfw/wlfw/VPNkhd/index.htm",
+    "title": "北京科技大学信息化建设与管理办公室",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京化工大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北京化工大学",
+    "url": "https://cit.buct.edu.cn/2019/0524/c168a94982/page.htm",
+    "title": "VPN使用说明及客户端下载",
+    "retrieved_at": "2026-10-04"
+  },
+  "北方工业大学__network_account_guide.txt": {
+    "authority": "official",
+    "school": "北方工业大学",
+    "url": "https://yjsy.ncut.edu.cn/info/1185/3626.htm",
+    "title": "北方工业大学2024级研究生统一身份认证、企业微信、WebVPN、校园网及校园卡使用说明-北方工业大学 研究生院 | 学科建设办公室",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京工商大学__network_faq.txt": {
+    "authority": "official",
+    "school": "北京工商大学",
+    "url": "https://nic.btbu.edu.cn/swyw/cjwt/",
+    "title": "北京工商大学信息网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京化工大学__vpn_desktop.txt": {
+    "authority": "official",
+    "school": "北京化工大学",
+    "url": "https://vpn.buct.edu.cn/2022/0928/c12807a172088/page.htm",
+    "title": "SSL VPN电脑端使用方法",
+    "retrieved_at": "2026-10-04"
+  },
+  "清华大学__campus_network_guide.pdf": {
+    "authority": "official",
+    "school": "清华大学",
+    "url": "https://its.tsinghua.edu.cn/__local/4/DE/70/09B0E55BFA6E2B7F2A8DB1D257F_BC58902D_2C2E09.pdf",
+    "title": "campus_network_guide",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京工商大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北京工商大学",
+    "url": "https://nic.btbu.edu.cn/yyxt/vpn/165723.htm",
+    "title": "",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京印刷学院__vpn_manual.pdf": {
+    "authority": "official",
+    "school": "北京印刷学院",
+    "url": "https://its.bigc.edu.cn/docs/2025-04/019a934cc4cd4a5bab494983d859c657.pdf",
+    "title": "vpn_manual",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国农业大学__remote_access.txt": {
+    "authority": "official",
+    "school": "中国农业大学",
+    "url": "https://www.cau.edu.cn/tzgg/472479.htm",
+    "title": "关于“十一”期间在校外访问校内网络的友情提示  - 通知公告 - 中国农业大学",
+    "retrieved_at": "2026-10-04"
+  },
+  "首都医科大学__network_service.txt": {
+    "authority": "official",
+    "school": "首都医科大学",
+    "url": "https://icc.ccmu.edu.cn/xywsysm_13782/77033.htm",
+    "title": "首都医科大学信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京师范大学__network_faq.txt": {
+    "authority": "official",
+    "school": "北京师范大学",
+    "url": "https://info.bnu.edu.cn/cjwd/xywcjwtjd/index.html",
+    "title": "北京师范大学信息化建设办公室/信息网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京外国语大学__vpn_notice.txt": {
+    "authority": "official",
+    "school": "北京外国语大学",
+    "url": "https://itc.bfsu.edu.cn/info/1052/9861.htm",
+    "title": "关于开通校外使用VPN（客户端）通道访问校内资源服务的通知-北外信息技术中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京师范大学__network_faq_detail.txt": {
+    "authority": "official",
+    "school": "北京师范大学",
+    "url": "https://info.bnu.edu.cn/cjwd/xywcjwtjd/40fac06dcdb247a7a8e8376eec422e3b.html",
+    "title": "北京师范大学信息化建设办公室/信息网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京外国语大学__webvpn_guide.txt": {
+    "authority": "official",
+    "school": "北京外国语大学",
+    "url": "https://itc.bfsu.edu.cn/xxhfwzn/zyfwkzxt_WebVPN_.htm",
+    "title": "资源访问控制系统（WebVPN）-北外信息技术中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京语言大学__webvpn_guide.txt": {
+    "authority": "official",
+    "school": "北京语言大学",
+    "url": "https://xxb.blcu.edu.cn/fwzn1/webvpn1/syzn.htm",
+    "title": "使用指南-北京语言大学信息化办公室",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央财经大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "中央财经大学",
+    "url": "https://zhxy.cufe.edu.cn/info/1082/4256.htm",
+    "title": "VPN使用指南 | 校外如何访问校内资源-中央财经大学智慧校园建设中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国人民公安大学__remote_access.txt": {
+    "authority": "official",
+    "school": "中国人民公安大学",
+    "url": "https://www.ppsuc.edu.cn/info/1022/6557.htm",
+    "title": "如何在校外访问校园内网-中国人民公安大学",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京体育大学__student_network_guide.txt": {
+    "authority": "official",
+    "school": "北京体育大学",
+    "url": "https://it.bsu.edu.cn/fwzn/xs/da30f9c76294400bab91cb98384debca.htm",
+    "title": "信息网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京物资学院__network_service.txt": {
+    "authority": "official",
+    "school": "北京物资学院",
+    "url": "https://is.bwu.edu.cn/info/1114/2271.htm",
+    "title": "网络服务-Beijing Wuzi University",
+    "retrieved_at": "2026-10-04"
+  },
+  "对外经济贸易大学__service_manual.pdf": {
+    "authority": "official",
+    "school": "对外经济贸易大学",
+    "url": "https://im.uibe.edu.cn/docs/2024-07/6888cf23facb4468a25187b1f52a7e38.pdf",
+    "title": "service_manual",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央音乐学院__ssl_vpn_guide.txt": {
+    "authority": "official",
+    "school": "中央音乐学院",
+    "url": "https://www.ccom.edu.cn/info/9281/79791.htm",
+    "title": "中央音乐学院SSL VPN系统使用方法-中央音乐学院",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央民族大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "中央民族大学",
+    "url": "https://met.muc.edu.cn/info/1046/1674.htm",
+    "title": "中央民族大学VPN系统使用说明-信息化建设管理处",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央民族大学__network_login_guide.txt": {
+    "authority": "official",
+    "school": "中央民族大学",
+    "url": "https://met.muc.edu.cn/info/1008/1846.htm",
+    "title": "中央民族大学校园网新版认证系统上网使用说明-信息化建设管理处",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央戏剧学院__network_guide.txt": {
+    "authority": "official",
+    "school": "中央戏剧学院",
+    "url": "https://www.chntheatre.edu.cn/cn/xxwlzx/saba/21369.html",
+    "title": "校园网使用指南_中央戏剧学院",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京信息科技大学__vpn_guide.txt": {
+    "authority": "official",
+    "school": "北京信息科技大学",
+    "url": "https://inc.bistu.edu.cn/fwzn/fwzn_wljc/379621.html",
+    "title": "校外VPN拨号服务_网络基础_北京信息科技大学信息网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国矿业大学（北京）__network_faq.txt": {
+    "authority": "official",
+    "school": "中国矿业大学（北京）",
+    "url": "https://info.cumtb.edu.cn/cjwt.htm",
+    "title": "常见问题-中国矿业大学（北京）网络与信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国石油大学（北京）__vpn_faq.txt": {
+    "authority": "official",
+    "school": "中国石油大学（北京）",
+    "url": "https://www.cup.edu.cn/nic/ggfw/grfw/vpn/vpncjwt/index.htm",
+    "title": "常见问题-中国石油大学（北京）信息化管理处 信息技术中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央戏剧学院__identity_guide.txt": {
+    "authority": "official",
+    "school": "中央戏剧学院",
+    "url": "https://www.chntheatre.edu.cn/cn/xxwlzx/saba/21370.html",
+    "title": "统一身份认证使用指南_中央戏剧学院",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国石油大学（北京）__network_manual.txt": {
+    "authority": "official",
+    "school": "中国石油大学（北京）",
+    "url": "https://www.cup.edu.cn/nic/ggfw/grfw/xyw/xywsysm/index.htm",
+    "title": "使用说明-中国石油大学（北京）信息化管理处 信息技术中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京信息科技大学__vpn_manual.pdf": {
+    "authority": "official",
+    "school": "北京信息科技大学",
+    "url": "https://inc.bistu.edu.cn/docs/2024-03/P020220609547463870782.pdf",
+    "title": "vpn_manual",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国地质大学（北京）__vpn_access.txt": {
+    "authority": "official",
+    "school": "中国地质大学（北京）",
+    "url": "https://www.cugb.edu.cn/vpnjr.jhtml",
+    "title": "VPN接入指南-中国地质大学（北京）",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国劳动关系学院__vpn_guide.txt": {
+    "authority": "official",
+    "school": "中国劳动关系学院",
+    "url": "https://news.culr.edu.cn/wlxxzx/wlfw/vpngl/23621.htm",
+    "title": "中国劳动关系学院网络信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国劳动关系学院__network_notice.txt": {
+    "authority": "official",
+    "school": "中国劳动关系学院",
+    "url": "https://news.culr.edu.cn/xygg/notice/wl/23617.htm",
+    "title": "欢迎访问中国劳动关系学院",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京农业职业学院__wifi_faq.txt": {
+    "authority": "official",
+    "school": "北京农业职业学院",
+    "url": "https://www.bvca.edu.cn/xxzx/info/1039/1079.htm",
+    "title": "“校园无线网BVCA”使用一问一答-北京农业职业学院信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京服装学院__personal_services.txt": {
+    "authority": "official",
+    "school": "北京服装学院",
+    "url": "https://itc.bift.edu.cn/fwzn/gryh/index.htm",
+    "title": "个人用户_北京服装学院信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国社会科学院大学__vpn_change_notice.txt": {
+    "authority": "official",
+    "school": "中国社会科学院大学",
+    "url": "https://nc.ucass.edu.cn/info/1055/1692.htm",
+    "title": "关于中国社会科学院大学VPN系统访问方式调整的通知-中国社会科学院大学网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国社会科学院大学__remote_access.txt": {
+    "authority": "official",
+    "school": "中国社会科学院大学",
+    "url": "https://nc.ucass.edu.cn/wlfw/ycfw.htm",
+    "title": "远程访问-中国社会科学院大学网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国科学院大学__wired_network.txt": {
+    "authority": "official",
+    "school": "中国科学院大学",
+    "url": "https://inc.ucas.edu.cn/index.php/zh/xyws/yxwe",
+    "title": "有线网",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京科技职业大学__network_authentication.txt": {
+    "authority": "official",
+    "school": "北京科技职业大学",
+    "url": "https://www.bpu.edu.cn/xxgk/jgsz/xxzx/xyw/rwrz.htm",
+    "title": "入网认证-北京科技职业大学",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国科学院大学__network_service_guide.pdf": {
+    "authority": "official",
+    "school": "中国科学院大学",
+    "url": "https://sep.ucas.edu.cn/resources/doc/User_Service_Guide%5BYJS%5D.pdf",
+    "title": "network_service_guide",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国科学院大学__wireless_network.txt": {
+    "authority": "official",
+    "school": "中国科学院大学",
+    "url": "https://inc.ucas.ac.cn/index.php/zh/xyws/wxwe",
+    "title": "无线WiFi",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国传媒大学__network_access.txt": {
+    "authority": "official",
+    "school": "中国传媒大学",
+    "url": "https://its.cuc.edu.cn/2022/0922/c8498a199120/page.htm",
+    "title": "访问校园网",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国传媒大学__it_services_2025.txt": {
+    "authority": "official",
+    "school": "中国传媒大学",
+    "url": "https://its.cuc.edu.cn/2025/0408/c8169a254082/page.htm",
+    "title": "中国传媒大学信息化服务指南(V1-250401)",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国传媒大学__new_student_guide.txt": {
+    "authority": "official",
+    "school": "中国传媒大学",
+    "url": "https://its.cuc.edu.cn/2025/1120/c8169a263982/page.htm",
+    "title": "新生必看 | 信息化服务指南（2025）",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京建筑大学__portal_guide.txt": {
+    "authority": "official",
+    "school": "北京建筑大学",
+    "url": "https://nic.bucea.edu.cn/fwzx/c/xxmh/index.htm",
+    "title": "信息门户_北京建筑大学数字化与智算中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京农学院__network_manual_2026.txt": {
+    "authority": "official",
+    "school": "北京农学院",
+    "url": "https://e.bua.edu.cn/info/1062/1498.htm",
+    "title": "校园网入网手册（2026年版）-北京农学院网络服务平台",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京农学院__network_faq.txt": {
+    "authority": "official",
+    "school": "北京农学院",
+    "url": "https://e.bua.edu.cn/info/1062/1127.htm",
+    "title": "校园网使用常见问题解答-北京农学院网络服务平台",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京农学院__service_faq.txt": {
+    "authority": "official",
+    "school": "北京农学院",
+    "url": "https://e.bua.edu.cn/info/1070/1488.htm",
+    "title": "常见问题-北京农学院网络服务平台",
+    "retrieved_at": "2026-10-04"
+  },
+  "中央财经大学__vpn_faq.txt": {
+    "authority": "official",
+    "school": "中央财经大学",
+    "url": "https://vpn.cufe.edu.cn/info/1002/1101.htm",
+    "title": "关于网康VPN的各种常见问题-中央财经大学VPN",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国传媒大学__network_faq.txt": {
+    "authority": "official",
+    "school": "中国传媒大学",
+    "url": "https://its.cuc.edu.cn/bz/list.htm",
+    "title": "校园网常见问题",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京大学__vpn_modes.txt": {
+    "authority": "official",
+    "school": "北京大学",
+    "url": "https://its.pku.edu.cn/service_1_vpn_readme.jsp",
+    "title": "北京大学网络服务",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京大学__vpn_client.txt": {
+    "authority": "official",
+    "school": "北京大学",
+    "url": "https://its.pku.edu.cn/service_1_vpn_client.jsp",
+    "title": "北京大学网络服务",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国矿业大学（北京）__network_guide_2025.txt": {
+    "authority": "official",
+    "school": "中国矿业大学（北京）",
+    "url": "https://info.cumtb.edu.cn/info/1016/3007.htm",
+    "title": "中国矿业大学（北京）2025级新生入学信息化服务指南-中国矿业大学（北京）网络与信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京师范大学__network_faq_83804.txt": {
+    "authority": "official",
+    "school": "北京师范大学",
+    "url": "https://info.bnu.edu.cn/cjwd/xywcjwtjd/83804.html",
+    "title": "北京师范大学信息化建设办公室/信息网络中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京科技大学__network_faq.txt": {
+    "authority": "official",
+    "school": "北京科技大学",
+    "url": "https://info.ustb.edu.cn/xxfw/wlfw/xywcjwt/index.htm",
+    "title": "北京科技大学信息化建设与管理办公室",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国矿业大学（北京）__network_guide.txt": {
+    "authority": "official",
+    "school": "中国矿业大学（北京）",
+    "url": "https://info.cumtb.edu.cn/info/1016/1799.htm",
+    "title": "中国矿业大学（北京）校园网使用指南-中国矿业大学（北京）网络与信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国矿业大学（北京）__wifi_faq.txt": {
+    "authority": "official",
+    "school": "中国矿业大学（北京）",
+    "url": "https://info.cumtb.edu.cn/info/1007/1362.htm",
+    "title": "二、校园无线网部分-中国矿业大学（北京）网络与信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "中国矿业大学（北京）__account_faq.txt": {
+    "authority": "official",
+    "school": "中国矿业大学（北京）",
+    "url": "https://info.cumtb.edu.cn/info/1007/1736.htm",
+    "title": "一、校园上网账号部分-中国矿业大学（北京）网络与信息中心",
+    "retrieved_at": "2026-10-04"
+  },
+  "清华大学__wired_network_auth.txt": {
+    "authority": "official",
+    "school": "清华大学",
+    "url": "https://its.tsinghua.edu.cn/1wzcycejdh_content.jsp?urltype=news.NewsContentUrl&wbnewsid=4006&wbtreeid=1770",
+    "title": "有线网络-上网实名认证操作指南-清华大学信息化用户服务平台",
+    "retrieved_at": "2026-10-04"
+  },
+  "清华大学__wired_network_access.txt": {
+    "authority": "official",
+    "school": "清华大学",
+    "url": "https://its.tsinghua.edu.cn/1wzcycejdh_content.jsp?urltype=news.NewsContentUrl&wbnewsid=4007&wbtreeid=1770",
+    "title": "有线网络-联网操作指南-清华大学信息化用户服务平台",
+    "retrieved_at": "2026-10-04"
+  },
+  "清华大学__webvpn_mfa.txt": {
+    "authority": "official",
+    "school": "清华大学",
+    "url": "https://its.tsinghua.edu.cn/1wzcycejdh_content.jsp?urltype=news.NewsContentUrl&wbnewsid=4000&wbtreeid=1771",
+    "title": "WebVPN 双因素认证操作指南-清华大学信息化用户服务平台",
+    "retrieved_at": "2026-10-04"
+  },
+  "清华大学__endpoint_security.pdf": {
+    "authority": "official",
+    "school": "清华大学",
+    "url": "https://its.tsinghua.edu.cn/__local/A/08/83/982FDBFBC582BA36D46B72C8CE2_95F6AF17_1F6B94.pdf",
+    "title": "endpoint_security",
+    "retrieved_at": "2026-10-04"
+  },
+  "北京邮电大学__library_network_service.txt": {
+    "authority": "official",
+    "school": "北京邮电大学",
+    "url": "https://libportal.bupt.edu.cn/a/fuwu/shangwangfuwu/",
+    "title": "北京邮电大学图书馆",
+    "retrieved_at": "2026-10-04"
+  },
+  "华北电力大学__network_faq.txt": {
+    "authority": "official",
+    "school": "华北电力大学",
+    "url": "https://its.ncepu.edu.cn/cjwt/wl/52529cfa567a42d4a6f77b5142f67912.htm",
+    "title": "网络-华北电力大学数智工作处",
+    "retrieved_at": "2026-10-04"
+  },
+  "华北电力大学__identity_faq.txt": {
+    "authority": "official",
+    "school": "华北电力大学",
+    "url": "https://its.ncepu.edu.cn/cjwt/tysfrz/4912194e04804f9483514d88012d07d0.htm",
+    "title": "统一身份认证-华北电力大学数智工作处",
+    "retrieved_at": "2026-10-04"
+  }
 }

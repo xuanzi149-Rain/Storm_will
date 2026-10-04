@@ -8,3 +8,4 @@ streamlit
 pypdf
 python-dotenv
 pydantic-settings
+beautifulsoup4
