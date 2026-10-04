@@ -66,6 +66,9 @@ if "result" in st.session_state:
                 st.markdown(f"[{source['title']}]{chr(40)}{source['url']}{chr(41)}{page} · {source['authority']}")
             else:
                 st.caption(f"{source['title']}{page} · {source['authority']}")
+        # No official source among them: the user must know the advice is not the school's.
+        if not any("官方网页整理" == source.get("authority") for source in result["sources"]):
+            st.warning("以上建议依据非学校官方发布的学生/团队整理资料，请以学校官方渠道为准。")
     st.subheader("报修摘要")
     st.code(result["repair_summary"], language=None)
     st.caption("如问题未解决，可复制摘要提交到学校正式服务渠道。")
