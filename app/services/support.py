@@ -42,8 +42,7 @@ def repair_summary(question: str, attempts: str, category: str) -> str:
     return (
         f"问题类别：{category}\n"
         f"问题描述：{redact(question.strip())}\n"
-        f"已尝试操作：{redact(attempts.strip()) or '尚未提供'}\n"
-        "当前状态：问题仍未解决，请协助核查。"
+        f"已尝试操作：{redact(attempts.strip()) or '尚未提供'}"
     )
 
 
