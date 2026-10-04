@@ -32,16 +32,29 @@ if st.button("获取建议", type="primary", use_container_width=True):
         st.warning("请先描述遇到的问题。")
     else:
         try:
-            response = requests.post(API_URL, json={"school": school, "question": question, "attempts": attempts}, timeout=45)
+            # The client must outwait the server: 30s timeout x 2 attempts plus
+            # backoff is ~65s worst case, so a 45s client deadline would report a
+            # failure while the backend was still working.
+            with st.spinner("正在检索资料并生成建议，通常需要 10–30 秒…"):
+                response = requests.post(
+                    API_URL,
+                    json={"school": school, "question": question, "attempts": attempts},
+                    timeout=90,
+                )
             response.raise_for_status()
             st.session_state["result"] = response.json()
             st.session_state["result_school"] = school
         except requests.RequestException:
             st.error("服务暂时不可用，请稍后重试。")
 
-if "result" in st.session_state and st.session_state.get("result_school") == school:
+if "result" in st.session_state:
     result = st.session_state["result"]
+    shown_school = st.session_state.get("result_school", "")
+    # Switching the school selector used to blank the whole section silently.
+    if shown_school and shown_school != school:
+        st.info(f"以下建议基于「{shown_school}」。已切换学校，请重新点击「获取建议」。")
     st.subheader(f"处理建议 · {result['category']}")
+    # st.write() renders a string as plain text, so Markdown line breaks show up as literal \n.
     st.markdown(result["answer"], unsafe_allow_html=False)
     if result["status"] == "need_detail":
         st.info("补充症状后再次提交，可获得更准确的建议。")
