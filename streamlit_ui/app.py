@@ -6,8 +6,8 @@ import streamlit as st
 API_URL = os.getenv("API_URL", "http://localhost:8000/api/v1/query")
 SCHOOLS_URL = API_URL.rsplit("/", 1)[0] + "/schools"
 
-st.set_page_config(page_title="校园网络服务智能助手", page_icon="🌐", layout="centered")
-st.title("🌐 校园网络服务智能助手")
+st.set_page_config(page_title="校园网络问题服务智能助手", page_icon="🌐", layout="centered")
+st.title("🌐 校园网络问题服务智能助手")
 st.caption("校园网、账号与 VPN 问题的资料检索和报修辅助；本服务并非学校官方报修系统。")
 try:
     schools = requests.get(SCHOOLS_URL, timeout=10).json()
@@ -35,7 +35,7 @@ if st.button("获取建议", type="primary", use_container_width=True):
             # The client must outwait the server: 30s timeout x 2 attempts plus
             # backoff is ~65s worst case, so a 45s client deadline would report a
             # failure while the backend was still working.
-            with st.spinner("正在检索资料并生成建议，这通常需要一小会…"):
+            with st.spinner("正在检索资料并生成建议，通常需要 10–30 秒…"):
                 response = requests.post(
                     API_URL,
                     json={"school": school, "question": question, "attempts": attempts},
