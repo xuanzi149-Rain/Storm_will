@@ -19,6 +19,7 @@ examples = [
     "校外无法访问校内网站，VPN 应该如何使用？",
     "校园网账号无法登录，我应该先检查什么？",
     "校园网连接失败，页面提示认证错误怎么办？",
+    "宿舍网络有问题怎么办？",
 ]
 chosen = st.selectbox("典型问题", ["自己描述问题"] + examples)
 question = st.text_area("描述遇到的问题", value="" if chosen == "自己描述问题" else chosen, height=100)
