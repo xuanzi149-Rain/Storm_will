@@ -52,6 +52,15 @@ def repair_summary(question: str, attempts: str, category: str) -> str:
     )
 
 
+AUTHORITY_LABELS = {
+    "official": "官方网页整理",
+    # Student-written or team-curated material that may inform an answer, but is
+    # not published by the school and must be labelled as such on the page.
+    "team": "非官方资料（学生/团队整理）",
+}
+ANSWER_AUTHORITIES = ("official", "team")
+
+
 def source_info(doc) -> dict:
     path = Path(doc.metadata.get("source", "未知来源"))
     page = doc.metadata.get("page")
@@ -59,7 +68,7 @@ def source_info(doc) -> dict:
     return {
         "title": path.name,
         "page": page + 1 if isinstance(page, int) else None,
-        "authority": "官方网页整理" if authority == "official" else "非官方/未核验资料",
+        "authority": AUTHORITY_LABELS.get(authority, "非官方/未核验资料"),
         "url": doc.metadata.get("url", ""),
     }
 
@@ -132,19 +141,20 @@ def answer(question: str, attempts: str = "", school: str = "") -> dict:
             return {**base, "status": status, "answer": f"当前没有足够的{school}官方资料回答这个问题。建议联系该校正式服务渠道，并附上报修摘要。"}
 
         official_documents = [doc for doc in documents if doc.metadata.get("authority") == "official"]
-        if not official_documents:
+        answer_documents = [doc for doc in documents if doc.metadata.get("authority") in ANSWER_AUTHORITIES]
+        if not answer_documents:
             status = "unsupported"
             return {**base, "status": status, "answer": "只检索到非官方或未核验资料，无法据此给出故障处理步骤。请联系学校正式服务渠道。", "sources": [source_info(doc) for doc in documents]}
 
         sources = []
-        for doc in official_documents:
+        for doc in answer_documents:
             item = source_info(doc)
             if item not in sources:
                 sources.append(item)
         try:
             # answer_text once more: it is cheap and keeps the "empty answer"
             # guard working no matter what the generator returned.
-            response = redact(answer_text(generate_answer(safe_question, official_documents))).strip()
+            response = redact(answer_text(generate_answer(safe_question, answer_documents))).strip()
             if not response:
                 raise ValueError("empty answer")
         except Exception as exc:
@@ -152,6 +162,10 @@ def answer(question: str, attempts: str = "", school: str = "") -> dict:
             logger.error("Answer generation failed (%s): %s", type(exc).__name__, detail)
             status = "error"
             return {**base, "status": status, "answer": "回答服务暂时不可用。请稍后重试，或联系学校正式服务渠道。"}
+        if not official_documents:
+            # Answered purely from non-official material: say so in the copyable summary.
+            logger.info("answered from non-official material only school=%s", school)
+            base["repair_summary"] += "\n说明：本回答依据非学校官方发布的学生/团队整理资料，请以学校官方渠道为准。"
         status = "answered"
         return {**base, "status": status, "answer": response, "sources": sources}
     finally:
