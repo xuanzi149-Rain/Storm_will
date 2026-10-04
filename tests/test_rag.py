@@ -36,6 +36,18 @@ class SupportTests(unittest.TestCase):
         self.assertEqual(result["status"], "unsupported")
         generate.assert_not_called()
 
+    def test_generation_failure_is_logged_without_exposing_details(self):
+        doc = Document(page_content="北京大学 VPN 使用说明", metadata={
+            "source": "vpn.txt", "authority": "official", "school": "北京大学"
+        })
+        with patch("app.services.support.retrieve", return_value=[(doc, 0.9)]), patch(
+            "app.services.support.generate_answer", side_effect=RuntimeError("private upstream detail")
+        ), self.assertLogs("app.services.support", level="ERROR") as captured:
+            result = answer("校外无法访问校内网站，VPN 怎么使用？", school="北京大学")
+        self.assertEqual(result["status"], "error")
+        self.assertNotIn("private upstream detail", result["answer"])
+        self.assertIn("private upstream detail", "\n".join(captured.output))
+
     def test_unverified_document_cannot_drive_steps(self):
         doc = Document(page_content="旧版配置说明", metadata={"source": "旧手册.pdf", "authority": "unverified", "school": "北京邮电大学"})
         with patch("app.services.support.retrieve", return_value=[(doc, 0.9)]), patch(

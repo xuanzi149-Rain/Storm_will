@@ -1,11 +1,14 @@
 """Small support workflow around the existing RAG store."""
 
+import logging
 import re
 from pathlib import Path
 
 from app.core.config import settings
 from app.services.rag_chain import generate_answer, retrieve
 from app.services.schools import beijing_schools
+
+logger = logging.getLogger(__name__)
 
 CATEGORY_WORDS = {
     "VPN": ("vpn", "校外访问", "远程访问", "atrust"),
@@ -99,6 +102,8 @@ def answer(question: str, attempts: str = "", school: str = "") -> dict:
             sources.append(item)
     try:
         response = redact(generate_answer(safe_question, official_documents))
-    except Exception:
+    except Exception as exc:
+        detail = str(exc).replace(settings.gemini_api_key, "[REDACTED]") if settings.gemini_api_key else str(exc)
+        logger.error("Answer generation failed (%s): %s", type(exc).__name__, detail)
         return {**base, "status": "error", "answer": "回答服务暂时不可用。请稍后重试，或联系学校正式服务渠道。"}
     return {**base, "status": "answered", "answer": response, "sources": sources}
