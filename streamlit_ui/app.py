@@ -35,7 +35,7 @@ if st.button("获取建议", type="primary", use_container_width=True):
             # The client must outwait the server: 30s timeout x 2 attempts plus
             # backoff is ~65s worst case, so a 45s client deadline would report a
             # failure while the backend was still working.
-            with st.spinner("正在检索资料并生成建议，通常需要 10–30 秒…"):
+            with st.spinner("正在检索资料并生成建议，这通常需要一小会…"):
                 response = requests.post(
                     API_URL,
                     json={"school": school, "question": question, "attempts": attempts},
