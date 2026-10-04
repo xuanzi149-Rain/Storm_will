@@ -42,7 +42,7 @@ if st.button("获取建议", type="primary", use_container_width=True):
 if "result" in st.session_state and st.session_state.get("result_school") == school:
     result = st.session_state["result"]
     st.subheader(f"处理建议 · {result['category']}")
-    st.write(result["answer"])
+    st.markdown(result["answer"], unsafe_allow_html=False)
     if result["status"] == "need_detail":
         st.info("补充症状后再次提交，可获得更准确的建议。")
     if result["sources"]:
