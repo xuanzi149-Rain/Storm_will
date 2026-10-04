@@ -13,11 +13,11 @@ logger = logging.getLogger(__name__)
 
 CATEGORY_WORDS = {
     "VPN": ("vpn", "校外访问", "远程访问", "atrust", "webvpn"),
-    "账号": ("账号", "账户", "登录", "密码", "认证", "otp"),
+    "账号": ("账号", "账户", "登录", "密码", "认证", "otp", "忘记"),
     "校园网": ("校园网", "wifi", "wi-fi", "网络", "断网", "连不上", "上不了网",
               "宿舍", "网口", "网线", "交换机", "上网", "有线", "ip"),
 }
-SYMPTOM_WORDS = ("报错", "错误", "失败", "无法", "不能", "连不上", "打不开", "断开", "超时", "忘记", "不知道", "怎么", "如何", "哪里", "在哪", "申请", "使用")
+SYMPTOM_WORDS = ("报错", "错误", "失败", "无法", "不能", "连不上", "打不开", "断开", "超时", "忘记", "不知道", "怎么", "如何", "哪里", "在哪", "申请", "使用", "坏了", "没反应")
 SENSITIVE = re.compile(r"(?i)(密码|口令|验证码|otp|token)\s*[:：=]\s*\S+")
 
 
@@ -37,7 +37,8 @@ def needs_detail(question: str, category: str) -> bool:
     """Ask for more detail only when the question carries no symptom at all.
 
     This used to also return early for category == "其他", which rejected
-    questions like "宿舍网口坏了" before any retrieval happened.
+    questions like "宿舍网口坏了" before any retrieval happened — even though
+    the corpus does cover them.
     """
     lower = question.lower().strip()
     return len(lower) < 7 or not any(word in lower for word in SYMPTOM_WORDS)
